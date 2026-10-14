@@ -2,8 +2,8 @@
 
 **Nr laboratorium:** 02  
 **Temat:** Wstęp do biblioteki GSL oraz narzędzia GNUPLOT  
-**Autor:** Maciej Bielewski  
-**Data:** 8/10/2026
+**Autor:** Maciej Bielewski 
+**Data:** 9/10/2026
 
 ---
 
@@ -176,14 +176,14 @@ Zmodyfikowany program został skompilowany i uruchomiony. Funkcja `gsl_ieee_prin
 
 Wyniki zestawiono w tabeli.
 
-| Liczba | Początek mantysy | Wykładnik w wydruku | Reprezentacja |
-|---|---|---:|---|
-| (2^{-1020}) | `1.000...` | −1020 | Znormalizowana |
-| (2^{-1021}) | `1.000...` | −1021 | Znormalizowana |
-| (2^{-1022}) | `1.000...` | −1022 | Znormalizowana |
-| (2^{-1023}) | `0.100...` | −1022 | Podnormalna |
-| (2^{-1024}) | `0.010...` | −1022 | Podnormalna |
-| (2^{-1025}) | `0.001...` | −1022 | Podnormalna |
+| Liczba      | Początek mantysy | Wykładnik w wydruku | Reprezentacja  |
+| ----------- | ---------------- | ------------------: | -------------- |
+| (2^{-1020}) | `1.000...`       |               −1020 | Znormalizowana |
+| (2^{-1021}) | `1.000...`       |               −1021 | Znormalizowana |
+| (2^{-1022}) | `1.000...`       |               −1022 | Znormalizowana |
+| (2^{-1023}) | `0.100...`       |               −1022 | Podnormalna    |
+| (2^{-1024}) | `0.010...`       |               −1022 | Podnormalna    |
+| (2^{-1025}) | `0.001...`       |               −1022 | Podnormalna    |
 
 Najmniejsza dodatnia liczba znormalizowana typu `double` wynosi:
 
@@ -207,7 +207,7 @@ Dane z pliku `dane1.dat` przedstawiono na wykresie ze skalą logarytmiczną na o
 
 **Rysunek 2. Wykres danych z pliku `dane1.dat`**
 
-![alt text](image-1.png)
+![alt text](image2.png)
 
 ### 3.4. Wykres danych z pliku `dane2.dat`
 
@@ -220,7 +220,7 @@ Punkt ten zaznaczono na wykresie trójwymiarowym za pomocą etykiety i strzałki
 
 **Rysunek 3. Wykres trójwymiarowy danych z pliku `dane2.dat` z zaznaczonym maksimum**
 
-![alt text](image-3.png)
+![alt text](image3.png)
 
 ## 4. Weryfikacja poprawności rozwiązania
 
@@ -244,11 +244,11 @@ Wybór osi logarytmicznej uzasadnia zakres danych: współrzędna $x$ przyjmuje 
 
 W zbiorze danych znajduje się 576 punktów. Porównanie wartości trzeciej kolumny wskazuje, że największa zapisana wartość wynosi $1$, a odpowiadające jej współrzędne to $x=4$ oraz $y=3$.
 
-Wynik numeryczny można zweryfikować przez porównanie wszystkich wartości funkcji w pliku. Weryfikację graficzną stanowi sprawdzenie położenia najwyższego punktu oraz zgodności strzałki i etykiety z jego współrzędnymi.
+Poprawność wyniku numerycznego sprawdzono przez porównanie wartości w trzeciej kolumnie dla wszystkich 576 punktów. Największa zapisana wartość wynosi $1$ i występuje dla $x=4$ oraz $y=3$. Na wykresie sprawdzono, czy etykieta i strzałka wskazują ten punkt.
 
 ## 5. Wnioski
 
-1. Reprezentacja liczb zmiennoprzecinkowych zgodna ze standardem IEEE-754 ma ograniczoną precyzję. Liczba (1/3) nie ma skończonego rozwinięcia binarnego, dlatego jej wartość musi być przybliżana.
+1. Reprezentacja liczb zmiennoprzecinkowych zgodna ze standardem IEEE 754 ma ograniczoną precyzję. Liczba (1/3) nie ma skończonego rozwinięcia binarnego, dlatego jej wartość musi być przybliżana.
 
 2. Konwersja wartości `float` na `double` nie odzyskuje precyzji utraconej przy wcześniejszym zaokrągleniu. Zwiększenie liczby bitów przeznaczonych na zapis wartości nie przywraca informacji, które nie zostały zachowane w pierwotnej reprezentacji.
 
