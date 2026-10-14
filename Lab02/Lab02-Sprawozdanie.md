@@ -3,7 +3,7 @@
 **Nr laboratorium:** 02  
 **Temat:** Wstęp do biblioteki GSL oraz narzędzia GNUPLOT  
 **Autor:** Maciej Bielewski  
-**Data:** 9/10/2026
+**Data:** 8/10/2026
 
 ---
 
